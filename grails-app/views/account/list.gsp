@@ -25,6 +25,8 @@
 				<g:if test="${flash.message}">
 				<bootstrap:alert class="alert-info">${flash.message}</bootstrap:alert>
 				</g:if>
+				<br/>
+				<g:if test="${accountInstanceTotal > 0}">
 				<table class="table table-hover">
 					<thead>
 						<tr>
@@ -38,7 +40,7 @@
 					</thead>
 					<tbody>
 					<g:each in="${accountInstanceList}" status="i" var="accountInstance">
-						<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+						<tr>
 							<td>${fieldValue(bean: accountInstance, field: "id")}</td>
 							<td>${fieldValue(bean: accountInstance, field: "name")}</td>
 							<td>${fieldValue(bean: accountInstance, field: "institution")}</td>
@@ -52,6 +54,10 @@
 				<div class="pagination">
 					<g:paginate total="${accountInstanceTotal}" />
 				</div>
+				</g:if>
+				<g:else>
+					<p class="lead">Nothing to see here!</p>
+				</g:else>
 			</div>
 		</div>
 		
