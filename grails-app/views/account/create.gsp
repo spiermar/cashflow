@@ -38,8 +38,7 @@
 					<g:render template="form"/>
 					<div class="control-group">
 						<div class="controls">
-							<i class="icon-ok icon-white"></i> 
-							<g:submitButton name="create" class="btn btn-primary" value="${message(code: 'default.button.create.label', default: 'Create')}" />
+							<g:submitButton name="create" class="btn btn-primary" value="${message(code: 'default.button.create.label', default: '<i class=\"icon-ok icon-white\"></i> Create')}" />
 						</div>
 					</div>
 				</g:form>
