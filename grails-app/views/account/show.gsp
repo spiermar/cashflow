@@ -30,8 +30,8 @@
 					<g:render template="form" model="['disabled':'true']" />
 					<div class="control-group">
 						<div class="controls">
-							<g:link class="btn" action="edit" id="${accountInstance?.id}"><g:message code="default.button.edit.label" default="<i class=\"icon-pencil\"></i> Edit" /></g:link>
-							<a href="#deleteModal" role="button" class="btn btn-danger" data-toggle="modal"><g:message code="default.button.delete.label" default="<i class=\"icon-trash icon-white\"></i> Delete" /></a>
+							<g:link class="btn" action="edit" id="${accountInstance?.id}"><i class="icon-pencil"></i> <g:message code="default.button.edit.label" default="Edit" /></g:link>
+							<a href="#deleteModal" role="button" class="btn btn-danger" data-toggle="modal"><i class="icon-trash icon-white"></i> <g:message code="default.button.delete.label" default="Delete" /></a>
 						</div>
 					</div>
 				</g:form>
@@ -49,7 +49,7 @@
 			</div>
 			<div class="modal-footer">
 			    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-			    <g:link class="btn btn-danger" action="delete" id="${accountInstance?.id}"><g:message code="default.button.delete.label" default="<i class=\"icon-trash icon-white\"></i> Delete" /></g:link>
+			    <g:link class="btn btn-danger" action="delete" id="${accountInstance?.id}"><i class="icon-trash icon-white"></i> <g:message code="default.button.delete.label" default="Delete" /></g:link>
 			</div>
 		</div>
 

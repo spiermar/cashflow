@@ -41,8 +41,11 @@
 					<g:render template="form"/>
 					<div class="control-group">
 						<div class="controls">
-							<g:actionSubmit class="btn btn-primary" action="update" value="${message(code: 'default.button.update.label', default: '<i class=\"icon-ok icon-white\"></i> Update')}" />
-							<a href="#deleteModal" role="button" class="btn btn-danger" data-toggle="modal"><g:message code="default.button.delete.label" default="<i class=\"icon-trash icon-white\"></i> Delete" /></a>
+							<button type="submit" class="btn btn-primary">
+								<i class="icon-ok icon-white"></i>
+								<g:message code="default.button.update.label" default="Update" />
+							</button>
+							<a href="#deleteModal" role="button" class="btn btn-danger" data-toggle="modal"><i class="icon-trash icon-white"></i> <g:message code="default.button.delete.label" default="Delete" /></a>
 						</div>
 					</div>
 				</g:form>
@@ -60,7 +63,7 @@
 			</div>
 			<div class="modal-footer">
 			    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-			    <g:link class="btn btn-danger" action="delete" id="${accountInstance?.id}"><g:message code="default.button.delete.label" default="<i class=\"icon-trash icon-white\"></i> Delete" /></g:link>
+			    <g:link class="btn btn-danger" action="delete" id="${accountInstance?.id}"><i class="icon-trash icon-white"></i> <g:message code="default.button.delete.label" default="Delete" /></g:link>
 			</div>
 		</div>
 		
