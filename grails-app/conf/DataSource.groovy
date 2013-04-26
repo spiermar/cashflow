@@ -25,8 +25,10 @@ environments {
     }
     production {
         dataSource {
+			dbdir = "${System.properties['catalina.base']}/db"
             dbCreate = "update"
-            url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
+			url = "jdbc:h2:file:${dbdir}/prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
+            // url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
             pooled = true
             properties {
                maxActive = -1
