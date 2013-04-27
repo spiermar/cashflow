@@ -26,15 +26,47 @@
 				<g:if test="${flash.message}">
 				<bootstrap:alert class="alert-info">${flash.message}</bootstrap:alert>
 				</g:if>
-				<g:form class="form-horizontal" >
-					<g:render template="form" model="['disabled':'true']" />
-					<div class="control-group">
-						<div class="controls">
+				<div class="row-fluid">
+					<div class="span2">
+						<p class="lead text-right"><strong><g:message code="account.name.label" default="Name" /></strong></p>
+					</div>
+					<div class="span10">
+						<p class="lead">${accountInstance?.name}</p>
+					</div>	
+				</div>
+				<div class="row-fluid">
+					<div class="span2">
+						<p class="lead text-right"><strong><g:message code="account.institution.label" default="Institution" /></strong></p>
+					</div>
+					<div class="span10">
+						<p class="lead">${accountInstance?.institution}</p>
+					</div>	
+				</div>
+				<div class="row-fluid">
+					<div class="span2">
+						<p class="lead text-right"><strong><g:message code="account.number.label" default="Number" /></strong></p>
+					</div>
+					<div class="span10">
+						<p class="lead">${accountInstance?.number}</p>
+					</div>	
+				</div>
+				<div class="row-fluid">
+					<div class="span2">
+						<p class="lead text-right"><strong><g:message code="account.type.label" default="Type" /></strong></p>
+					</div>
+					<div class="span10">
+						<p class="lead">${accountInstance?.type}</p>
+					</div>	
+				</div>
+				<br>
+				<div class="row-fluid">
+					<div class="span10 offset2">
+						<div class="btn-toolbar" style="margin: 0;">
 							<g:link class="btn" action="edit" id="${accountInstance?.id}"><i class="icon-pencil"></i> <g:message code="default.button.edit.label" default="Edit" /></g:link>
 							<a href="#deleteModal" role="button" class="btn btn-danger" data-toggle="modal"><i class="icon-trash icon-white"></i> <g:message code="default.button.delete.label" default="Delete" /></a>
 						</div>
 					</div>
-				</g:form>
+				</div>
 			</div>
 		</div>
 		
