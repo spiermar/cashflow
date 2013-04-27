@@ -6,7 +6,7 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<div class="controls">
-		<g:textField name="name" required="" value="${accountInstance?.name}" disabled="${disabled}" />
+		<g:textField name="name" required="" value="${accountInstance?.name}" />
 	</div>
 </div>
 
@@ -16,7 +16,7 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<div class="controls">
-		<g:textField name="institution" required="" value="${accountInstance?.institution}" disabled="${disabled}" />
+		<g:textField name="institution" required="" value="${accountInstance?.institution}" />
 	</div>
 </div>
 
@@ -26,7 +26,7 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<div class="controls">
-		<g:textField name="number" required="" value="${accountInstance?.number}" disabled="${disabled}" />
+		<g:textField name="number" required="" value="${accountInstance?.number}" />
 	</div>
 </div>
 
@@ -36,7 +36,7 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<div class="controls">
-		<g:select name="type" from="${['Checking','Savings','Broker']}" required="" value="${accountInstance?.type}" disabled="${disabled}" />
+		<g:select name="type" from="${['Checking','Savings','Broker']}" required="" value="${accountInstance?.type}" />
 	</div>
 </div>
 
