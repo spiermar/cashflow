@@ -36,7 +36,7 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<div class="controls">
-		<g:textField name="type" required="" value="${accountInstance?.type}" disabled="${disabled}" />
+		<g:select name="type" from="${['Checking','Savings','Broker']}" required="" value="${accountInstance?.type}" disabled="${disabled}" />
 	</div>
 </div>
 

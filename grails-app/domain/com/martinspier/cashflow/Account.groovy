@@ -13,6 +13,6 @@ class Account {
 		name blank: false, unique: true, nullable: false
 		institution blank: false, nullable: false
 		number blank: false, nullable: false
-		type blank: false, nullable: false
+		type blank: false, nullable: false, inList: ["Checking", "Savings", "Broker"]
     }
 }

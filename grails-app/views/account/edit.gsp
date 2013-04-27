@@ -35,7 +35,7 @@
 				</ul>
 				</bootstrap:alert>
 				</g:hasErrors>
-				<g:form method="post" class="form-horizontal"  >
+				<g:form action="update" class="form-horizontal"  >
 					<g:hiddenField name="id" value="${accountInstance?.id}" />
 					<g:hiddenField name="version" value="${accountInstance?.version}" />
 					<g:render template="form"/>
