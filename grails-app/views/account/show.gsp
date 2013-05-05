@@ -11,16 +11,13 @@
 		<div class="page-header">
 			<h1><g:message code="default.show.label" args="[entityName]" /></h1>
 		</div>
-		
 		<div class="row-fluid">
 			<div class="btn-toolbar" style="margin: 0;">
 				<g:link class="btn" action="list"><i class="icon-list"></i> <g:message code="default.list.label" args="[entityName]" /></g:link>
-				<g:link class="create" action="create" class="btn"><i class="icon-plus"></i> <g:message code="default.new.label" args="[entityName]" /></g:link>
+				<g:link class="btn" action="create"><i class="icon-plus"></i> <g:message code="default.new.label" args="[entityName]" /></g:link>
 			</div>
 		</div>
-		
 		<hr>
-		
 		<div class="row-fluid">
 			<div class="span12">
 				<g:if test="${flash.message}">
@@ -61,30 +58,31 @@
 				<br>
 				<div class="row-fluid">
 					<div class="span10 offset2">
-					<g:form>
-						<g:hiddenField name="id" value="${accountInstance?.id}" />
-						<div class="btn-toolbar" style="margin: 0;">
-							<g:link class="btn" action="edit" id="${accountInstance?.id}">
-								<i class="icon-pencil"></i>
-								<g:message code="default.button.edit.label" default="Edit" />
-							</g:link>
-							<a href="#deleteModal" class="btn btn-danger" data-toggle="modal"><i class="icon-trash icon-white"></i> <g:message code="default.button.delete.label" default="Delete" /></a>
-						</div>
-						<!-- Modal -->
-						<div id="deleteModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-							<div class="modal-header">
-							    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-							    <h3 id="myModalLabel"><g:message code="default.button.delete.confirm.header" default="Are you sure?" /></h3>
+						<g:form>
+							<g:hiddenField name="id" value="${accountInstance?.id}" />
+							<div class="btn-toolbar" style="margin: 0;">
+								<g:link class="btn" action="edit" id="${accountInstance?.id}">
+									<i class="icon-pencil"></i>
+									<g:message code="default.button.edit.label" default="Edit" />
+								</g:link>
+								<a href="#deleteModal" class="btn btn-danger" data-toggle="modal"><i class="icon-trash icon-white"></i> <g:message code="default.button.delete.label" default="Delete" /></a>
 							</div>
-							<div class="modal-body">
-							    <p><g:message code="default.button.delete.confirm.message" args="[entityName, accountInstance?.id]" default="Are you sure?" /></p>
+							<!-- Modal -->
+							<div id="deleteModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+								<div class="modal-header">
+								    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></button>
+								    <h3 id="deleteModalLabel"><g:message code="default.button.delete.confirm.header" default="Are you sure?" /></h3>
+								</div>
+								<div class="modal-body">
+								    <p><g:message code="default.button.delete.confirm.message" args="[entityName, accountInstance?.id]" default="Are you sure?" /></p>
+								</div>
+								<div class="modal-footer">
+								    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+								    <g:actionSubmit class="btn btn-danger" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" />
+								</div>
 							</div>
-							<div class="modal-footer">
-							    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-							    <g:actionSubmit class="btn btn-danger" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" />
-							</div>
-						</div>
-					</g:form>	
+						</g:form>
+					</div>
 				</div>
 			</div>
 		</div>

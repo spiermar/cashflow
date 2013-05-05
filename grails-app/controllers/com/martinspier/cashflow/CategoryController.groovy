@@ -3,6 +3,8 @@ package com.martinspier.cashflow
 import org.springframework.dao.DataIntegrityViolationException
 
 class CategoryController {
+	
+	static scaffold = true
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
