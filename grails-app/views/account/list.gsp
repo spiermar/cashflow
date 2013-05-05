@@ -11,10 +11,9 @@
 		<div class="page-header">
 			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
 		</div>
-		
 		<div class="row-fluid">
 			<div class="btn-toolbar" style="margin: 0;">
-				<g:link class="btn" action="create"><i class="icon-plus"></i>  <g:message code="default.new.label" args="[entityName]" /></g:link>
+				<g:link class="btn" action="create"><i class="icon-plus"></i> <g:message code="default.new.label" args="[entityName]" /></g:link>
 			</div>
 		</div>
 		<hr/>
@@ -58,6 +57,5 @@
 				</g:else>
 			</div>
 		</div>
-		
 	</body>
 </html>
