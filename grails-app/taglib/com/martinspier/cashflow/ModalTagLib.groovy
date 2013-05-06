@@ -27,6 +27,12 @@ class ModalTagLib {
 		out << '<h3 id="showModalLabel">' + g.message(code: 'default.show.label', args: attrs.entityName, default: 'Show') + '</h3>'
 		out << '</div>'
 		out << '<div class="modal-body">'
+		out << '<dl class="dl-horizontal">'
+		attrs.fields.each() { key, value ->
+			out << '<dt>' + key + '</dt>'
+			out << '<dd>' + value + '</dd>'
+		}
+		out << '</dl>'
 		out << '</div>'
 		out << '<div class="modal-footer">'
 		out << '</div>'
