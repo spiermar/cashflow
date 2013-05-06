@@ -66,20 +66,7 @@
 								</g:link>
 								<a href="#deleteModal" class="btn btn-danger" data-toggle="modal"><i class="icon-trash icon-white"></i> <g:message code="default.button.delete.label" default="Delete" /></a>
 							</div>
-							<!-- Modal -->
-							<div id="deleteModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
-								<div class="modal-header">
-								    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></button>
-								    <h3 id="deleteModalLabel"><g:message code="default.button.delete.confirm.header" default="Are you sure?" /></h3>
-								</div>
-								<div class="modal-body">
-								    <p><g:message code="default.button.delete.confirm.message" args="[entityName, ${propertyName}?.id]" default="Are you sure?" /></p>
-								</div>
-								<div class="modal-footer">
-								    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-								    <g:actionSubmit class="btn btn-danger" action="delete" value="\${message(code: 'default.button.delete.label', default: 'Delete')}" />
-								</div>
-							</div>
+							<modal:delete id="\${${propertyName}?.id}" entityName="\${entityName}" />
 						</g:form>
 					</div>
 				</div>

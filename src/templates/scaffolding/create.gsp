@@ -35,6 +35,7 @@
 					<g:render template="form"/>
 					<div class="control-group">
 						<div class="controls">
+							<g:link action="list" class="btn"><g:message code="default.button.cancel.label" default="Cancel" /></g:link>
 							<button type="submit" class="btn btn-primary">
 								<i class="icon-ok icon-white"></i>
 								<g:message code="default.button.create.label" default="Create" />

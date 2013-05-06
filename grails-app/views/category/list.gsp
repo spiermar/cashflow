@@ -1,4 +1,3 @@
-
 <%@ page import="com.martinspier.cashflow.Category" %>
 <!DOCTYPE html>
 <html>
@@ -28,21 +27,19 @@
 				<table class="table table-hover">
 					<thead>
 						<tr>
-						
+							<g:sortableColumn property="id" title="#" />
 							<g:sortableColumn property="name" title="${message(code: 'category.name.label', default: 'Name')}" />
-							
-							<g:sortableColumn property="parent" title="${message(code: 'category.parent.label', default: 'Parent')}" />
-												
+							<g:sortableColumn property="parent" title="${message(code: 'category.parent.label', default: 'Parent')}" />	
+							<th></th>				
 						</tr>
 					</thead>
 					<tbody>
 					<g:each in="${categoryInstanceList}" status="i" var="categoryInstance">
 						<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-						
-							<td><g:link action="show" id="${categoryInstance.id}">${fieldValue(bean: categoryInstance, field: "name")}</g:link></td>
-						
-							<td><g:if test="${categoryInstance?.parent}"><g:link action="show" id="${categoryInstance.parent.id}">${fieldValue(bean: categoryInstance, field: "parent.name")}</g:link></g:if></td>
-						
+							<td>${fieldValue(bean: categoryInstance, field: "id")}</td>
+							<td>${fieldValue(bean: categoryInstance, field: "name")}</td>
+							<td><g:if test="${categoryInstance?.parent}">${fieldValue(bean: categoryInstance, field: "parent.name")}</g:if></td>
+							<td><g:link action="show" id="${categoryInstance.id}" class="btn">Show &raquo;</g:link></td>
 						</tr>
 					</g:each>
 					</tbody>

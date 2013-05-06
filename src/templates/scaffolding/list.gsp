@@ -39,6 +39,7 @@
 						<%      } else { %>
 							<g:sortableColumn property="${p.name}" title="\${message(code: '${domainClass.propertyName}.${p.name}.label', default: '${p.naturalName}')}" />
 						<%  }   }   } %>
+							<th></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -46,7 +47,7 @@
 						<tr class="\${(i % 2) == 0 ? 'even' : 'odd'}">
 						<%  props.eachWithIndex { p, i ->
 								if (i == 0) { %>
-							<td><g:link action="show" id="\${${propertyName}.id}">\${fieldValue(bean: ${propertyName}, field: "${p.name}")}</g:link></td>
+							<td>\${fieldValue(bean: ${propertyName}, field: "${p.name}")}</td>
 						<%      } else if (i < 6) {
 									if (p.type == Boolean || p.type == boolean) { %>
 							<td><g:formatBoolean boolean="\${${propertyName}.${p.name}}" /></td>
@@ -55,6 +56,7 @@
 						<%          } else { %>
 							<td>\${fieldValue(bean: ${propertyName}, field: "${p.name}")}</td>
 						<%  }   }   } %>
+							<td><g:link action="show" id="\${${propertyName}.id}" class="btn">Show &raquo;</g:link></td>
 						</tr>
 					</g:each>
 					</tbody>

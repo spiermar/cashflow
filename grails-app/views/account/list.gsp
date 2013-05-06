@@ -37,7 +37,7 @@
 					</thead>
 					<tbody>
 					<g:each in="${accountInstanceList}" status="i" var="accountInstance">
-						<tr>
+						<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 							<td>${fieldValue(bean: accountInstance, field: "id")}</td>
 							<td>${fieldValue(bean: accountInstance, field: "name")}</td>
 							<td>${fieldValue(bean: accountInstance, field: "institution")}</td>
