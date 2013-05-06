@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<div class="page-header">
-			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
+			<h1><g:message code="default.create.label" args="[entityName]" /></h1>
 		</div>
 		<div class="row-fluid">
 			<div class="btn-toolbar" style="margin: 0;">

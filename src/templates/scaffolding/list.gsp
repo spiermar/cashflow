@@ -14,7 +14,7 @@
 		</div>
 		<div class="row-fluid">
 			<div class="btn-toolbar" style="margin: 0;">
-				<g:link class="create" action="create" class="btn"><i class="icon-plus"></i>  <g:message code="default.new.label" args="[entityName]" /></g:link>
+				<g:link action="create" class="btn"><i class="icon-plus"></i> <g:message code="default.new.label" args="[entityName]" /></g:link>
 			</div>
 		</div>
 		<hr/>
