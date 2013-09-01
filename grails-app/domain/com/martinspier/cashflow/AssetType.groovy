@@ -1,10 +1,10 @@
 package com.martinspier.cashflow
 
-class Tag {
-	
-	String name
+class AssetType {
+
+    String type
 
     static constraints = {
-		name blank: false, unique: true
+        type blank: false
     }
 }

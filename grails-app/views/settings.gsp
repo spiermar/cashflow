@@ -27,4 +27,18 @@
 			<p><g:link controller="tag" action="list" class="btn">View details &raquo;</g:link></p>
 		</div>
 	</div>
+    <div class="row-fluid">
+        <div class="span3">
+            <h2>Brokers</h2>
+            <p>Brokers are used within trades to identify the broker that executed each trade.</p>
+            <p><g:link controller="broker" action="list" class="btn">View details &raquo;</g:link></p>
+        </div>
+        <div class="span3">
+            <h2>Asset Types</h2>
+            <p>Asset Types are used to sort assets. Different Asset Types have different taxes and fees that need to be calculated.</p>
+            <p><g:link controller="assetType" action="list" class="btn">View details &raquo;</g:link></p>
+        </div>
+        <div class="span3">
+        </div>
+    </div>
 </html>

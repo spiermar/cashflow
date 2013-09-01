@@ -6,7 +6,7 @@ class Category {
 	Category parent
 
     static constraints = {
-		name blank: false, unique: true, nullable: false
-		parent blank: true, nullable: true
+		name blank: false, unique: true
+		parent nullable: true
     }
 }

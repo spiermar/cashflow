@@ -12,9 +12,7 @@ class Transaction {
 	static belongsTo = [account: Account]
 
     static constraints = {
-		date blank: false, nullable: false
-		amount blank: false, nullable: false
-		description blank: false, nullable: false
-		category blank: true, nullable: true
+		description blank: false
+		category nullable: true
     }
 }
