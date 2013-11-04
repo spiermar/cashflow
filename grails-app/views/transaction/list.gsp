@@ -12,14 +12,16 @@
 		<div class="page-header">
 			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
 		</div>
-		<div class="row-fluid">
-			<div class="btn-toolbar" style="margin: 0;">
-				<g:link action="create" class="btn"><i class="icon-plus"></i> <g:message code="default.new.label" args="[entityName]" /></g:link>
-			</div>
+		<div class="row">
+            <div class="col-md-12">
+                <div class="btn-toolbar">
+                    <g:link action="create" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> <g:message code="default.new.label" args="[entityName]" /></g:link>
+                </div>
+            </div>
 		</div>
 		<hr/>
-		<div class="row-fluid">
-			<div class="span12">
+		<div class="row">
+			<div class="col-md-12">
 				<g:if test="${flash.message}">
 				<bootstrap:alert class="alert-info">${flash.message}</bootstrap:alert>
 				</g:if>
@@ -56,7 +58,7 @@
 						
 							<td>${transactionInstance?.account?.name}</td>
 						
-							<td><g:link action="show" id="${transactionInstance.id}" class="btn">Show &raquo;</g:link></td>
+							<td><g:link action="show" id="${transactionInstance.id}" class="btn btn-default">Show &raquo;</g:link></td>
 						</tr>
 					</g:each>
 					</tbody>

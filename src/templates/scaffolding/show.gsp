@@ -14,8 +14,8 @@
 		</div>
 		<div class="row-fluid">
 			<div class="btn-toolbar" style="margin: 0;">
-				<g:link class="btn" action="list"><i class="icon-list"></i> <g:message code="default.list.label" args="[entityName]" /></g:link>
-				<g:link class="create" action="create" class="btn"><i class="icon-plus"></i> <g:message code="default.new.label" args="[entityName]" /></g:link>
+				<g:link class="btn" action="list"><i class="glyphicon glyphicon-list"></i> <g:message code="default.list.label" args="[entityName]" /></g:link>
+				<g:link class="create" action="create" class="btn"><i class="glyphicon glyphicon-plus"></i> <g:message code="default.new.label" args="[entityName]" /></g:link>
 			</div>
 		</div>
 		<hr>
@@ -61,10 +61,10 @@
 							<g:hiddenField name="id" value="\${${propertyName}?.id}" />
 							<div class="btn-toolbar" style="margin: 0;">
 								<g:link class="btn" action="edit" id="\${${propertyName}?.id}">
-									<i class="icon-pencil"></i>
+									<i class="glyphicon glyphicon-pencil"></i>
 									<g:message code="default.button.edit.label" default="Edit" />
 								</g:link>
-								<a href="#deleteModal" class="btn btn-danger" data-toggle="modal"><i class="icon-trash icon-white"></i> <g:message code="default.button.delete.label" default="Delete" /></a>
+								<a href="#deleteModal" class="btn btn-danger" data-toggle="modal"><i class="glyphicon glyphicon-trash"></i> <g:message code="default.button.delete.label" default="Delete" /></a>
 							</div>
 							<modal:delete id="\${${propertyName}?.id}" entityName="\${entityName}" />
 						</g:form>

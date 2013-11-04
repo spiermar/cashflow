@@ -13,7 +13,7 @@
 		</div>
 		<div class="row-fluid">
 			<div class="btn-toolbar" style="margin: 0;">
-				<g:link class="btn" action="list"><i class="icon-list"></i> <g:message code="default.list.label" args="[entityName]" /></g:link>
+				<g:link class="btn" action="list"><i class="glyphicon glyphicon-list"></i> <g:message code="default.list.label" args="[entityName]" /></g:link>
 			</div>
 		</div>
 		<hr/>
@@ -37,7 +37,7 @@
 						<div class="controls">
 							<g:link action="list" class="btn"><g:message code="default.button.cancel.label" default="Cancel" /></g:link>
 							<button type="submit" class="btn btn-primary">
-								<i class="icon-ok icon-white"></i>
+								<i class="glyphicon glyphicon-ok"></i>
 								<g:message code="default.button.create.label" default="Create" />
 							</button>
 						</div>

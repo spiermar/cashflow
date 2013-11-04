@@ -8,7 +8,7 @@ class BootstrapDatePickerTagLib {
         def id = attrs.id ?: name
 
         out << """
-        <input type="text" size="10" name="date" id="date" value="${value}" />
+        <input type="text" class="form-control" name="date" id="date" value="${value}" />
         <input type="hidden" name="${name}_day" id="${id}_day" />
         <input type="hidden" name="${name}_month" id="${id}_month" />
         <input type="hidden" name="${name}_year" id="${id}_year" />

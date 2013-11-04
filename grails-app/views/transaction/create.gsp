@@ -11,14 +11,16 @@
 		<div class="page-header">
 			<h1><g:message code="default.create.label" args="[entityName]" /></h1>
 		</div>
-		<div class="row-fluid">
-			<div class="btn-toolbar" style="margin: 0;">
-				<g:link class="btn" action="list"><i class="icon-list"></i> <g:message code="default.list.label" args="[entityName]" /></g:link>
-			</div>
+		<div class="row">
+            <div class="col-md-12">
+                <div class="btn-toolbar" style="margin: 0;">
+                    <g:link class="btn btn-default" action="list"><i class="glyphicon glyphicon-list"></i> <g:message code="default.list.label" args="[entityName]" /></g:link>
+                </div>
+            </div>
 		</div>
 		<hr/>
-		<div class="row-fluid">
-			<div class="span12">
+		<div class="row">
+			<div class="col-md-12">
 				<g:if test="${flash.message}">
 				<bootstrap:alert class="alert-info">${flash.message}</bootstrap:alert>
 				</g:if>
@@ -31,13 +33,13 @@
 				</ul>
 				</bootstrap:alert>
 				</g:hasErrors>
-				<g:form action="save" class="form-horizontal" >
+				<g:form action="save" class="form-horizontal" role="form" >
 					<g:render template="form"/>
-					<div class="control-group">
-						<div class="controls">
-							<g:link action="list" class="btn"><g:message code="default.button.cancel.label" default="Cancel" /></g:link>
+					<div class="form-group">
+						<div class="col-md-4 col-md-offset-2">
+							<g:link action="list" class="btn btn-default"><g:message code="default.button.cancel.label" default="Cancel" /></g:link>
 							<button type="submit" class="btn btn-primary">
-								<i class="icon-ok icon-white"></i>
+								<i class="glyphicon glyphicon-ok"></i>
 								<g:message code="default.button.create.label" default="Create" />
 							</button>
 						</div>

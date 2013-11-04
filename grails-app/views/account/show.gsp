@@ -11,57 +11,57 @@
 		<div class="page-header">
 			<h1><g:message code="default.show.label" args="[entityName]" /></h1>
 		</div>
-		<div class="row-fluid">
+		<div class="row">
 			<div class="btn-toolbar" style="margin: 0;">
-				<g:link class="btn" action="list"><i class="icon-list"></i> <g:message code="default.list.label" args="[entityName]" /></g:link>
-				<g:link class="btn" action="create"><i class="icon-plus"></i> <g:message code="default.new.label" args="[entityName]" /></g:link>
+				<g:link class="btn btn-default" action="list"><i class="icon-list"></i> <g:message code="default.list.label" args="[entityName]" /></g:link>
+				<g:link class="btn btn-default" action="create"><i class="icon-plus"></i> <g:message code="default.new.label" args="[entityName]" /></g:link>
 			</div>
 		</div>
 		<hr>
-		<div class="row-fluid">
-			<div class="span12">
+		<div class="row">
+			<div class="col-md-12">
 				<g:if test="${flash.message}">
 				<bootstrap:alert class="alert-info">${flash.message}</bootstrap:alert>
 				</g:if>
-				<div class="row-fluid">
-					<div class="span2">
+				<div class="row">
+					<div class="col-md-2">
 						<p class="lead text-right"><strong><g:message code="account.name.label" default="Name" /></strong></p>
 					</div>
-					<div class="span10">
+					<div class="col-md-10">
 						<p class="lead">${accountInstance?.name}</p>
 					</div>	
 				</div>
-				<div class="row-fluid">
-					<div class="span2">
+				<div class="row">
+					<div class="col-md-2">
 						<p class="lead text-right"><strong><g:message code="account.institution.label" default="Institution" /></strong></p>
 					</div>
-					<div class="span10">
+					<div class="col-md-10">
 						<p class="lead">${accountInstance?.institution}</p>
 					</div>	
 				</div>
-				<div class="row-fluid">
-					<div class="span2">
+				<div class="row">
+					<div class="col-md-2">
 						<p class="lead text-right"><strong><g:message code="account.number.label" default="Number" /></strong></p>
 					</div>
-					<div class="span10">
+					<div class="col-md-10">
 						<p class="lead">${accountInstance?.number}</p>
 					</div>	
 				</div>
-				<div class="row-fluid">
-					<div class="span2">
+				<div class="row">
+					<div class="col-md-2">
 						<p class="lead text-right"><strong><g:message code="account.type.label" default="Type" /></strong></p>
 					</div>
-					<div class="span10">
+					<div class="col-md-10">
 						<p class="lead">${accountInstance?.type}</p>
 					</div>	
 				</div>
 				<br>
-				<div class="row-fluid">
-					<div class="span10 offset2">
+				<div class="row">
+					<div class="col-md-10 col-md-offset-2">
 						<g:form>
 							<g:hiddenField name="id" value="${accountInstance?.id}" />
 							<div class="btn-toolbar" style="margin: 0;">
-								<g:link class="btn" action="edit" id="${accountInstance?.id}">
+								<g:link class="btn btn-default" action="edit" id="${accountInstance?.id}">
 									<i class="icon-pencil"></i>
 									<g:message code="default.button.edit.label" default="Edit" />
 								</g:link>

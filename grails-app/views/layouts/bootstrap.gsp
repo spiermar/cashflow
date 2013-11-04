@@ -21,76 +21,33 @@
 		<r:layoutResources />
 
         <link type="text/css" href="${resource(dir: 'css', file: 'datepicker.css')}" rel="stylesheet" />
+        <link type="text/css" href="${resource(dir: 'css', file: 'stickyfooter.css')}" rel="stylesheet" />
 
         <script src="${resource(dir: 'js', file: 'bootstrap-datepicker.js')}"></script>
-
-		<style type="text/css">
-			/* Sticky footer styles */
-			html,
-			body {
-				height: 100%;
-				/* The html and body elements cannot have any padding or margin. */
-			}
-			/* Wrapper for page content to push down footer */
-			#wrap {
-				min-height: 100%;
-				height: auto !important;
-				height: 100%;
-				/* Negative indent footer by it's height */
-				margin: 0 auto -60px;
-			}
-			/* Set the fixed height of the footer here */
-			#push,
-			#footer {
-				height: 60px;
-			}
-			#footer {
-				background-color: #f5f5f5;
-			}
-			/* Lastly, apply responsive CSS fixes as necessary */
-			@media (max-width: 767px) {
-				#footer {
-					margin-left: -20px;
-					margin-right: -20px;
-					padding-left: 20px;
-					padding-right: 20px;
-				}
-			}
-			/* Custom page CSS */
-			/* Not required for template or sticky footer method. */
-			#wrap > .container {
-				padding-top: 60px;
-			}
-			.container .credit {
-				margin: 20px 0;
-			}
-			code {
-				font-size: 80%;
-			}
-	    </style>
 	</head>
 	<body>
 		<div id="wrap">
 			<nav class="navbar navbar-inverse navbar-fixed-top">
-				<div class="navbar-inner">
-					<div class="container">		
-						<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
-						</a>				
-						<g:link uri="/" class="brand">Cashflow</g:link>
-						<div class="nav-collapse">
-							<ul class="nav">							
-								<li><g:link uri="/"><i class="icon-home icon-white"></i>  Home</g:link></li>
-								<li><g:link controller="transaction" action="list"><i class="icon-list icon-white"></i> Transactions</g:link></li>
-								<li><g:link controller="trade" action="list"><i class="icon-list icon-white"></i> Trades</g:link></li>
-							</ul>
-							<ul class="nav pull-right">
-								<li><g:link uri="/settings"><i class="icon-wrench icon-white"></i> Settings</g:link></li>
-							</ul>
-						</div>
+						</button>
+						<g:link uri="/" class="navbar-brand">Cashflow</g:link>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+						    <li><g:link uri="/"><i class="glyphicon glyphicon-home"></i>  Home</g:link></li>
+							<li><g:link controller="transaction" action="list"><i class="glyphicon glyphicon-list"></i> Transactions</g:link></li>
+							<li><g:link controller="trade" action="list"><i class="glyphicon glyphicon-list"></i> Trades</g:link></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li><g:link uri="/settings"><i class="glyphicon glyphicon-wrench"></i> Settings</g:link></li>
+						</ul>
 					</div>
+
 				</div>
 			</nav>	
 			<div class="container">
@@ -100,7 +57,7 @@
 		</div>
 		<div id="footer">
 			<div class="container">
-	        <p class="muted credit">Cashflow <g:meta name="app.version"/> | &copy; Martin Spier 2013 | Released under the Apache License, Version 2.0.</p>
+                <p class="text-muted credit">Cashflow <g:meta name="app.version"/> | &copy; Martin Spier 2013 | Released under the Apache License, Version 2.0.</p>
 			</div>
 	    </div>
 		<r:layoutResources />

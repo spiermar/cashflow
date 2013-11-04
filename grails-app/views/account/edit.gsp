@@ -11,15 +11,15 @@
 		<div class="page-header">
 			<h1><g:message code="default.edit.label" args="[entityName]" /></h1>
 		</div>
-		<div class="row-fluid">
+		<div class="row">
 			<div class="btn-toolbar" style="margin: 0;">
-				<g:link class="btn" action="list"><i class="icon-list"></i> <g:message code="default.list.label" args="[entityName]" /></g:link>
-				<g:link class="btn" action="create"><i class="icon-plus"></i>  <g:message code="default.new.label" args="[entityName]" /></g:link>
+				<g:link class="btn btn-default" action="list"><i class="glyphicon glyphicon-list"></i> <g:message code="default.list.label" args="[entityName]" /></g:link>
+				<g:link class="btn btn-default" action="create"><i class="glyphicon glyphicon-plus"></i>  <g:message code="default.new.label" args="[entityName]" /></g:link>
 			</div>
 		</div>
 		<hr>
-		<div class="row-fluid">
-			<div class="span12">
+		<div class="row">
+			<div class="col-md-12">
 				<g:if test="${flash.message}">
 				<bootstrap:alert class="alert-info">${flash.message}</bootstrap:alert>
 				</g:if>
@@ -36,11 +36,11 @@
 					<g:hiddenField name="id" value="${accountInstance?.id}" />
 					<g:hiddenField name="version" value="${accountInstance?.version}" />
 					<g:render template="form"/>
-					<div class="control-group">
+					<div class="form-group">
 						<div class="controls">
-							<g:link action="show" class="btn" id="${accountInstance?.id}"><g:message code="default.button.cancel.label" default="Cancel" /></g:link>
+							<g:link action="show" class="btn btn-default" id="${accountInstance?.id}"><g:message code="default.button.cancel.label" default="Cancel" /></g:link>
 							<button type="submit" class="btn btn-primary">
-								<i class="icon-ok icon-white"></i>
+								<i class="glyphicon glyphicon-ok"></i>
 								<g:message code="default.button.update.label" default="Update" />
 							</button>
 						</div>
