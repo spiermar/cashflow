@@ -36,7 +36,7 @@
 				<g:form action="save" class="form-horizontal" >
 					<g:render template="form"/>
 					<div class="form-group">
-						<div class="controls">
+						<div class="col-md-4 col-md-offset-2">
 							<g:link action="list" class="btn btn-default"><g:message code="default.button.cancel.label" default="Cancel" /></g:link>
 							<button type="submit" class="btn btn-primary">
 								<i class="glyphicon glyphicon-ok"></i>

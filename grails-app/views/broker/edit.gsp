@@ -37,7 +37,7 @@
 					<g:hiddenField name="version" value="${brokerInstance?.version}" />
 					<g:render template="form"/>
 					<div class="form-group">
-						<div class="controls">
+						<div class="col-md-4 col-md-offset-2">
 							<g:link action="show" class="btn btn-default" id="${brokerInstance?.id}"><g:message code="default.button.cancel.label" default="Cancel" /></g:link>
 							<button type="submit" class="btn btn-primary">
 								<i class="glyphicon glyphicon-ok"></i>

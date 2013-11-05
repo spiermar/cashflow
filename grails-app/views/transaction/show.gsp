@@ -13,10 +13,12 @@
 			<h1><g:message code="default.show.label" args="[entityName]" /></h1>
 		</div>
 		<div class="row">
-			<div class="btn-toolbar" style="margin: 0;">
-				<g:link class="btn btn-default" action="list"><i class="glyphicon glyphicon-list"></i> <g:message code="default.list.label" args="[entityName]" /></g:link>
-				<g:link class="create" action="create" class="btn btn-default"><i class="glyphicon glyphicon-plus"></i> <g:message code="default.new.label" args="[entityName]" /></g:link>
-			</div>
+            <div class="col-md-12">
+                <div class="btn-toolbar" style="margin: 0;">
+                    <g:link class="btn btn-default" action="list"><i class="glyphicon glyphicon-list"></i> <g:message code="default.list.label" args="[entityName]" /></g:link>
+                    <g:link class="btn btn-default" action="create"><i class="glyphicon glyphicon-plus"></i> <g:message code="default.new.label" args="[entityName]" /></g:link>
+                </div>
+            </div>
 		</div>
 		<hr>
 		<div class="row">
@@ -24,90 +26,44 @@
 				<g:if test="${flash.message}">
 				<bootstrap:alert class="alert-info">${flash.message}</bootstrap:alert>
 				</g:if>
-				
+                <dl class="dl-horizontal">
 				<g:if test="${transactionInstance?.date}">
-				<div class="row">
-					<div class="col-md-2">
-						<p class="lead text-right"><strong><g:message code="transaction.date.label" default="Date" /></strong></p>
-					</div>
-					<div class="col-md-10">
-						
-						<p class="lead"><g:formatDate format="MM/dd/yyyy" date="${transactionInstance?.date}" /></p>
-						
-					</div>
-				</div>
-				</g:if>
-				
+                    <dt><g:message code="transaction.date.label" default="Date" /></dt>
+                    <dd><g:formatDate format="MM/dd/yyyy" date="${transactionInstance?.date}" /></dd>
+                </g:if>
+
 				<g:if test="${transactionInstance?.amount}">
-				<div class="row">
-					<div class="col-md-2">
-						<p class="lead text-right"><strong><g:message code="transaction.amount.label" default="Amount" /></strong></p>
-					</div>
-					<div class="col-md-10">
-						
-						<p class="lead">$<g:fieldValue bean="${transactionInstance}" field="amount"/></p>
-						
-					</div>
-				</div>
+                    <dt><g:message code="transaction.amount.label" default="Amount" /></dt>
+                    <dd>$<g:fieldValue bean="${transactionInstance}" field="amount"/></dd>
 				</g:if>
 				
 				<g:if test="${transactionInstance?.description}">
-				<div class="row">
-					<div class="col-md-2">
-						<p class="lead text-right"><strong><g:message code="transaction.description.label" default="Description" /></strong></p>
-					</div>
-					<div class="col-md-10">
-						
-						<p class="lead"><g:fieldValue bean="${transactionInstance}" field="description"/></p>
-						
-					</div>
-				</div>
+                    <dt><g:message code="transaction.description.label" default="Description" /></dt>
+                    <dd><g:fieldValue bean="${transactionInstance}" field="description"/></dd>
 				</g:if>
 				
 				<g:if test="${transactionInstance?.category}">
-				<div class="row">
-					<div class="col-md-2">
-						<p class="lead text-right"><strong><g:message code="transaction.category.label" default="Category" /></strong></p>
-					</div>
-					<div class="col-md-10">
-						
-						<p class="lead"><g:link controller="category" action="show" id="${transactionInstance?.category?.id}">${transactionInstance?.category?.encodeAsHTML()}</g:link></p>
-						
-					</div>
-				</div>
+                    <dt><g:message code="transaction.category.label" default="Category" /></dt>
+                    <dd><g:link controller="category" action="show" id="${transactionInstance?.category?.id}">${transactionInstance?.category?.encodeAsHTML()}</g:link></dd>
 				</g:if>
 				
 				<g:if test="${transactionInstance?.account}">
-				<div class="row">
-					<div class="col-md-2">
-						<p class="lead text-right"><strong><g:message code="transaction.account.label" default="Account" /></strong></p>
-					</div>
-					<div class="col-md-10">
-						
-						<p class="lead"><g:link controller="account" action="show" id="${transactionInstance?.account?.id}">${transactionInstance?.account?.name}</g:link></p>
-						
-					</div>
-				</div>
+                    <dt><g:message code="transaction.account.label" default="Account" /></dt>
+                    <dd><g:link controller="account" action="show" id="${transactionInstance?.account?.id}">${transactionInstance?.account?.name}</g:link></dd>
 				</g:if>
 				
 				<g:if test="${transactionInstance?.tags}">
-				<div class="row">
-					<div class="col-md-2">
-						<p class="lead text-right"><strong><g:message code="transaction.tags.label" default="Tags" /></strong></p>
-					</div>
-					<div class="col-md-10">
-						
-						<g:each in="${transactionInstance.tags}" var="t">
-						<p class="lead"><g:link controller="tag" action="show" id="${t.id}">${t?.encodeAsHTML()}</g:link></p>
-						</g:each>
-						
-					</div>
-				</div>
+                    <dt><g:message code="transaction.tags.label" default="Tags" /></dt>
+                    <dd>
+                    <g:each in="${transactionInstance.tags}" var="t">
+                        <g:link controller="tag" action="show" id="${t.id}">${t?.encodeAsHTML()}</g:link><br>
+                    </g:each>
+                    </dd>
 				</g:if>
-				
-				<br>
+				</dl>
+                <hr>
 				<div class="row">
-					<div class="col-md-10 col-md-offset-2">
+					<div class="col-md-12">
 						<g:form>
 							<g:hiddenField name="id" value="${transactionInstance?.id}" />
 							<div class="btn-toolbar" style="margin: 0;">

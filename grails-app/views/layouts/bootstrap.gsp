@@ -35,7 +35,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<g:link uri="/" class="navbar-brand">Cashflow</g:link>
+						<g:link uri="/" class="navbar-brand"><span class="glyphicon glyphicon-euro"></span></g:link>
                     </div>
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav">

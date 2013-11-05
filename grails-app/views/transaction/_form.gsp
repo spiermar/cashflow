@@ -1,12 +1,17 @@
 <%@ page import="com.martinspier.cashflow.Transaction" %>
 
-<div class="form-group ${invalid ? 'error' : ''} required">
+<div class="form-group ${invalid ? 'error' : ''} required" xmlns="http://www.w3.org/1999/html">
 	<label class="col-md-2 control-label" for="date">
 		<g:message code="transaction.date.label" default="Date" />
 		<span class="required-indicator">*</span>
 	</label>
 	<div class="col-md-2">
-		<g:bootstrapDatePicker name="date" class="form-control" value="${transactionInstance?.date}"  />
+		<g:field type= "text" name="date" class="form-control" value="${transactionInstance?.date?.format("MM/dd/yyyy")}" required="" />
+        <script type="text/javascript">
+        $(function() {
+            $("#date").datepicker( { autoclose: true, todayBtn: true, format: "mm/dd/yyyy" } );
+        });
+        </script>
 		<g:if test="${invalid}"><span class="help-block">${errors.join('<br>')}</span></g:if>
 	</div>
 </div>

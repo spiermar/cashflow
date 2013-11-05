@@ -30,35 +30,23 @@
 				<table class="table table-hover">
 					<thead>
 						<tr>
-						
 							<g:sortableColumn property="date" title="${message(code: 'transaction.date.label', default: 'Date')}" />
-						
 							<g:sortableColumn property="amount" title="${message(code: 'transaction.amount.label', default: 'Amount')}" />
-						
 							<g:sortableColumn property="description" title="${message(code: 'transaction.description.label', default: 'Description')}" />
-						
-							<th><g:message code="transaction.category.label" default="Category" /></th>
-						
-							<th><g:message code="transaction.account.label" default="Account" /></th>
-						
+                            <g:sortableColumn property="description" title="${message(code: 'transaction.description.label', default: 'Category')}" />
+                            <g:sortableColumn property="description" title="${message(code: 'transaction.description.label', default: 'Account')}" />
 							<th></th>
 						</tr>
 					</thead>
 					<tbody>
 					<g:each in="${transactionInstanceList}" status="i" var="transactionInstance">
 						<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-						
 							<td><g:formatDate format="MM/dd/yyyy" date="${transactionInstance?.date}" /></td>
-						
 							<td>${fieldValue(bean: transactionInstance, field: "amount")}</td>
-						
 							<td>${fieldValue(bean: transactionInstance, field: "description")}</td>
-						
 							<td>${fieldValue(bean: transactionInstance, field: "category")}</td>
-						
 							<td>${transactionInstance?.account?.name}</td>
-						
-							<td><g:link action="show" id="${transactionInstance.id}" class="btn btn-default">Show &raquo;</g:link></td>
+							<td><g:link action="show" id="${transactionInstance.id}" class="btn btn-default btn-xs">Details &raquo;</g:link></td>
 						</tr>
 					</g:each>
 					</tbody>

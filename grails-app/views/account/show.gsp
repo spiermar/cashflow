@@ -12,10 +12,12 @@
 			<h1><g:message code="default.show.label" args="[entityName]" /></h1>
 		</div>
 		<div class="row">
-			<div class="btn-toolbar" style="margin: 0;">
-				<g:link class="btn btn-default" action="list"><i class="icon-list"></i> <g:message code="default.list.label" args="[entityName]" /></g:link>
-				<g:link class="btn btn-default" action="create"><i class="icon-plus"></i> <g:message code="default.new.label" args="[entityName]" /></g:link>
-			</div>
+            <div class="col-md-12">
+                <div class="btn-toolbar" style="margin: 0;">
+                    <g:link class="btn btn-default" action="list"><i class="glyphicon glyphicon-list"></i> <g:message code="default.list.label" args="[entityName]" /></g:link>
+                    <g:link class="btn btn-default" action="create"><i class="glyphicon glyphicon-plus"></i> <g:message code="default.new.label" args="[entityName]" /></g:link>
+                </div>
+            </div>
 		</div>
 		<hr>
 		<div class="row">
@@ -23,49 +25,27 @@
 				<g:if test="${flash.message}">
 				<bootstrap:alert class="alert-info">${flash.message}</bootstrap:alert>
 				</g:if>
+                <dl class="dl-horizontal">
+                    <dt><g:message code="account.name.label" default="Name" /></dt>
+                    <dd>${accountInstance?.name}</dd>
+                    <dt><g:message code="account.institution.label" default="Institution" /></dt>
+                    <dd>${accountInstance?.institution}</dd>
+                    <dt><g:message code="account.number.label" default="Number" /></dt>
+                    <dd>${accountInstance?.number}</dd>
+                    <dt><g:message code="account.type.label" default="Type" /></dt>
+                    <dd>${accountInstance?.type}</dd>
+                </dl>
+                <hr>
 				<div class="row">
-					<div class="col-md-2">
-						<p class="lead text-right"><strong><g:message code="account.name.label" default="Name" /></strong></p>
-					</div>
-					<div class="col-md-10">
-						<p class="lead">${accountInstance?.name}</p>
-					</div>	
-				</div>
-				<div class="row">
-					<div class="col-md-2">
-						<p class="lead text-right"><strong><g:message code="account.institution.label" default="Institution" /></strong></p>
-					</div>
-					<div class="col-md-10">
-						<p class="lead">${accountInstance?.institution}</p>
-					</div>	
-				</div>
-				<div class="row">
-					<div class="col-md-2">
-						<p class="lead text-right"><strong><g:message code="account.number.label" default="Number" /></strong></p>
-					</div>
-					<div class="col-md-10">
-						<p class="lead">${accountInstance?.number}</p>
-					</div>	
-				</div>
-				<div class="row">
-					<div class="col-md-2">
-						<p class="lead text-right"><strong><g:message code="account.type.label" default="Type" /></strong></p>
-					</div>
-					<div class="col-md-10">
-						<p class="lead">${accountInstance?.type}</p>
-					</div>	
-				</div>
-				<br>
-				<div class="row">
-					<div class="col-md-10 col-md-offset-2">
+					<div class="col-md-12">
 						<g:form>
 							<g:hiddenField name="id" value="${accountInstance?.id}" />
 							<div class="btn-toolbar" style="margin: 0;">
 								<g:link class="btn btn-default" action="edit" id="${accountInstance?.id}">
-									<i class="icon-pencil"></i>
+									<i class="glyphicon glyphicon-pencil"></i>
 									<g:message code="default.button.edit.label" default="Edit" />
 								</g:link>
-								<a href="#deleteModal" class="btn btn-danger" data-toggle="modal"><i class="icon-trash icon-white"></i> <g:message code="default.button.delete.label" default="Delete" /></a>
+								<a href="#deleteModal" class="btn btn-danger" data-toggle="modal"><i class="glyphicon glyphicon-trash"></i> <g:message code="default.button.delete.label" default="Delete" /></a>
 							</div>
 							<modal:delete id="${accountInstance?.id}" entityName="${entityName}" />
 						</g:form>

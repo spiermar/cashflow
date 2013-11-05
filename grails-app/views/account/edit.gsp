@@ -12,10 +12,12 @@
 			<h1><g:message code="default.edit.label" args="[entityName]" /></h1>
 		</div>
 		<div class="row">
-			<div class="btn-toolbar" style="margin: 0;">
-				<g:link class="btn btn-default" action="list"><i class="glyphicon glyphicon-list"></i> <g:message code="default.list.label" args="[entityName]" /></g:link>
-				<g:link class="btn btn-default" action="create"><i class="glyphicon glyphicon-plus"></i>  <g:message code="default.new.label" args="[entityName]" /></g:link>
-			</div>
+            <div class="col-md-12">
+                <div class="btn-toolbar" style="margin: 0;">
+                    <g:link class="btn btn-default" action="list"><i class="glyphicon glyphicon-list"></i> <g:message code="default.list.label" args="[entityName]" /></g:link>
+                    <g:link class="btn btn-default" action="create"><i class="glyphicon glyphicon-plus"></i>  <g:message code="default.new.label" args="[entityName]" /></g:link>
+                </div>
+            </div>
 		</div>
 		<hr>
 		<div class="row">
@@ -37,7 +39,7 @@
 					<g:hiddenField name="version" value="${accountInstance?.version}" />
 					<g:render template="form"/>
 					<div class="form-group">
-						<div class="controls">
+						<div class="col-md-4 col-md-offset-2">
 							<g:link action="show" class="btn btn-default" id="${accountInstance?.id}"><g:message code="default.button.cancel.label" default="Cancel" /></g:link>
 							<button type="submit" class="btn btn-primary">
 								<i class="glyphicon glyphicon-ok"></i>

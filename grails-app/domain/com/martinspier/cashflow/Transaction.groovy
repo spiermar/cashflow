@@ -1,7 +1,10 @@
 package com.martinspier.cashflow
 
+import org.grails.databinding.BindingFormat
+
 class Transaction {
-	
+
+    @BindingFormat('MM/dd/yyyy')
 	Date date
 	Double amount
 	String description
