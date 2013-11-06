@@ -35,6 +35,7 @@
                     <dt><g:message code="account.type.label" default="Type" /></dt>
                     <dd>${accountInstance?.type}</dd>
                 </dl>
+                <br>
                 <hr>
 				<div class="row">
 					<div class="col-md-12">

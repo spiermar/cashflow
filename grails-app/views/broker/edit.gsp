@@ -12,9 +12,11 @@
 			<h1><g:message code="default.edit.label" args="[entityName]" /></h1>
 		</div>
 		<div class="row">
-			<div class="btn-toolbar" style="margin: 0;">
-				<g:link class="btn btn-default" action="list"><i class="glyphicon glyphicon-list"></i> <g:message code="default.list.label" args="[entityName]" /></g:link>
-				<g:link class="btn btn-default" action="create"><i class="glyphicon glyphicon-plus"></i>  <g:message code="default.new.label" args="[entityName]" /></g:link>
+            <div class="col-md-12">
+			    <div class="btn-toolbar" style="margin: 0;">
+				    <g:link class="btn btn-default" action="list"><i class="glyphicon glyphicon-list"></i> <g:message code="default.list.label" args="[entityName]" /></g:link>
+				    <g:link class="btn btn-default" action="create"><i class="glyphicon glyphicon-plus"></i>  <g:message code="default.new.label" args="[entityName]" /></g:link>
+                </div>
 			</div>
 		</div>
 		<hr>

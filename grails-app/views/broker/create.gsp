@@ -12,8 +12,10 @@
 			<h1><g:message code="default.create.label" args="[entityName]" /></h1>
 		</div>
 		<div class="row">
-			<div class="btn-toolbar" style="margin: 0;">
-				<g:link class="btn btn-default" action="list"><i class="glyphicon glyphicon-list"></i> <g:message code="default.list.label" args="[entityName]" /></g:link>
+            <div class="col-md-12">
+			    <div class="btn-toolbar" style="margin: 0;">
+				    <g:link class="btn btn-default" action="list"><i class="glyphicon glyphicon-list"></i> <g:message code="default.list.label" args="[entityName]" /></g:link>
+                </div>
 			</div>
 		</div>
 		<hr/>
@@ -34,7 +36,7 @@
 				<g:form action="save" class="form-horizontal" >
 					<g:render template="form"/>
 					<div class="form-group">
-						<div class="controls">
+						<div class="col-md-4 col-md-offset-2">
 							<g:link action="list" class="btn btn-default"><g:message code="default.button.cancel.label" default="Cancel" /></g:link>
 							<button type="submit" class="btn btn-primary">
 								<i class="glyphicon glyphicon-ok"></i>

@@ -13,9 +13,11 @@
 			<h1><g:message code="default.show.label" args="[entityName]" /></h1>
 		</div>
 		<div class="row">
-			<div class="btn-toolbar" style="margin: 0;">
-				<g:link class="btn btn-default" action="list"><i class="glyphicon glyphicon-list"></i> <g:message code="default.list.label" args="[entityName]" /></g:link>
-				<g:link class="create" action="create" class="btn btn-default"><i class="glyphicon glyphicon-plus"></i> <g:message code="default.new.label" args="[entityName]" /></g:link>
+            <div class="col-md-12">
+			    <div class="btn-toolbar" style="margin: 0;">
+				    <g:link class="btn btn-default" action="list"><i class="glyphicon glyphicon-list"></i> <g:message code="default.list.label" args="[entityName]" /></g:link>
+				    <g:link class="btn btn-default" action="create"><i class="glyphicon glyphicon-plus"></i> <g:message code="default.new.label" args="[entityName]" /></g:link>
+                </div>
 			</div>
 		</div>
 		<hr>
@@ -24,49 +26,26 @@
 				<g:if test="${flash.message}">
 				<bootstrap:alert class="alert-info">${flash.message}</bootstrap:alert>
 				</g:if>
-				
+                <dl class="dl-horizontal">
 				<g:if test="${brokerInstance?.name}">
-				<div class="row">
-					<div class="col-md-2">
-						<p class="lead text-right"><strong><g:message code="broker.name.label" default="Name" /></strong></p>
-					</div>
-					<div class="col-md-10">
-						
-						<p class="lead"><g:fieldValue bean="${brokerInstance}" field="name"/></p>
-						
-					</div>
-				</div>
+                    <dt><g:message code="broker.name.label" default="Name" /></dt>
+                    <dd><g:fieldValue bean="${brokerInstance}" field="name"/></dd>
 				</g:if>
 				
 				<g:if test="${brokerInstance?.address}">
-				<div class="row">
-					<div class="col-md-2">
-						<p class="lead text-right"><strong><g:message code="broker.address.label" default="Address" /></strong></p>
-					</div>
-					<div class="col-md-10">
-						
-						<p class="lead"><g:link controller="address" action="show" id="${brokerInstance?.address?.id}">${brokerInstance?.address?.encodeAsHTML()}</g:link></p>
-						
-					</div>
-				</div>
+                    <dt><g:message code="broker.address.label" default="Address" /></dt>
+                    <dd><g:link controller="address" action="show" id="${brokerInstance?.address?.id}">${brokerInstance?.address?.encodeAsHTML()}</g:link></dd>
 				</g:if>
 				
 				<g:if test="${brokerInstance?.phone}">
-				<div class="row">
-					<div class="col-md-2">
-						<p class="lead text-right"><strong><g:message code="broker.phone.label" default="Phone" /></strong></p>
-					</div>
-					<div class="col-md-10">
-						
-						<p class="lead"><g:fieldValue bean="${brokerInstance}" field="phone"/></p>
-						
-					</div>
-				</div>
+                    <dt><g:message code="broker.phone.label" default="Phone" /></dt>
+                    <dd><g:fieldValue bean="${brokerInstance}" field="phone"/></dd>
 				</g:if>
-				
-				<br>
+				</dl>
+                <br>
+				<hr>
 				<div class="row">
-					<div class="col-md-10 col-md-offset-2">
+					<div class="col-md-12">
 						<g:form>
 							<g:hiddenField name="id" value="${brokerInstance?.id}" />
 							<div class="btn-toolbar" style="margin: 0;">
