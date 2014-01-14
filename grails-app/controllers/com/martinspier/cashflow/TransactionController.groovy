@@ -20,6 +20,11 @@ class TransactionController {
     }
 
     def save() {
+        def tags = []
+        params.get('hidden-tags').split(',').each {
+            tags.add(Tag.findOrCreateByName(it))
+        }
+        params.tags = tags
         def transactionInstance = new Transaction(params)
         if (!transactionInstance.save(flush: true)) {
             render(view: "create", model: [transactionInstance: transactionInstance])
@@ -69,6 +74,12 @@ class TransactionController {
                 return
             }
         }
+
+        def tags = []
+        params.get('hidden-tags').split(',').each {
+            tags.add(Tag.findOrCreateByName(it))
+        }
+        params.tags = tags
 
         transactionInstance.properties = params
 

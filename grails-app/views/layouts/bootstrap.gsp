@@ -20,10 +20,8 @@
 		<g:layoutHead/>
 		<r:layoutResources />
 
-        <link type="text/css" href="${resource(dir: 'css', file: 'datepicker.css')}" rel="stylesheet" />
         <link type="text/css" href="${resource(dir: 'css', file: 'stickyfooter.css')}" rel="stylesheet" />
 
-        <script src="${resource(dir: 'js', file: 'bootstrap-datepicker.js')}"></script>
 	</head>
 	<body>
 		<div id="wrap">

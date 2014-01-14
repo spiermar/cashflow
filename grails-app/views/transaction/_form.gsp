@@ -64,7 +64,18 @@
 		<g:message code="transaction.tags.label" default="Tags" />
 	</label>
 	<div class="col-md-4">
-		<g:select name="tags" from="${com.martinspier.cashflow.Tag.list()}" multiple="multiple" optionKey="id" size="5" value="${transactionInstance?.tags*.id}" class="many-to-many form-control"/>
+        <g:textField name="tags" class="form-control" />
+        <script type="text/javascript">
+        $(function() {
+            $("#tags").tagsManager({
+                prefilled: [
+                <g:each in="${transactionInstance.tags}" var="t">
+                    "${t.name}",
+                </g:each>
+                ]
+            });
+        });
+        </script>
 		<g:if test="${invalid}"><span class="help-block">${errors.join('<br>')}</span></g:if>
 	</div>
 </div>

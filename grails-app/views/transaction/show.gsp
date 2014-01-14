@@ -56,7 +56,7 @@
                     <dt><g:message code="transaction.tags.label" default="Tags" /></dt>
                     <dd>
                     <g:each in="${transactionInstance.tags}" var="t">
-                        <g:link controller="tag" action="show" id="${t.id}">${t?.encodeAsHTML()}</g:link><br>
+                        <span class="label label-primary">${t.name}</span>
                     </g:each>
                     </dd>
 				</g:if>

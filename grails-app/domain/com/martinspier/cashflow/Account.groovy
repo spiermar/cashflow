@@ -11,8 +11,8 @@ class Account {
 
     static constraints = {
 		name blank: false, unique: true
-		institution blank: false
+		institution nullable: true
 		number nullable: true
-		type blank: false, inList: ["Checking", "Savings", "Broker"]
+		type blank: false, inList: ["Checking", "Savings", "Brokerage"]
     }
 }

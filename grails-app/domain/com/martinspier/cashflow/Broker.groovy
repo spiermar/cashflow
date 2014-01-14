@@ -1,7 +1,5 @@
 package com.martinspier.cashflow
 
-import com.martinspier.cashflow.Address
-
 class Broker {
 
     String name

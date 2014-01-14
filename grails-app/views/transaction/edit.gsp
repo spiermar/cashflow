@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<meta name="layout" content="bootstrap">
-		<r:require modules="bootstrap"/>
+		<r:require modules="bootstrap, tagmanager, datepicker"/>
 		<g:set var="entityName" value="${message(code: 'transaction.label', default: 'Transaction')}" />
 		<title><g:message code="default.edit.label" args="[entityName]" /></title>
 	</head>
